@@ -1,0 +1,62 @@
+//
+// Custom variables
+// --------------------------------------------------
+
+
+// Colors
+@gray-darker:   rgb(51, 62, 72); // top nav bar
+@gray-dark:     rgb(130, 130, 130); // gray hr's
+@gray:          rgb(119, 134, 146); // bottom nav bar
+@yellow:        rgb(223, 221, 118);
+@white:         #fff;
+@red:           rgb(209, 42, 47);
+@red-dark:      rgb(218, 72, 65);
+@green:         rgb(81, 226, 191);
+@black:         rgb(51, 51, 51);
+@blue:          rgb(181, 216, 235);
+@blue-light:    rgb(225, 240, 247);
+
+
+@section-padding: 40px;
+
+
+// Custom Mixins
+// ----------------------
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+   -moz-border-radius: @radius;
+   border-radius: @radius;
+}
+
+.hr-white {
+    border-top: 1px solid @white;
+}
+
+.btn-red {
+    .border-radius(5px);
+    background: @red;
+    color: white;
+    padding: 12px 20px;
+    min-width: 220px;
+
+    &:hover {
+        background: @red-dark;
+        color: @white;
+    }
+
+    span {
+        display: block;
+    }
+
+    span:first-child {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+
+    span:nth-child(2) {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
