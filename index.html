@@ -209,7 +209,7 @@
             }, {offset: 15})
 
             $("#homepage .buttons").waypoint('sticky', {
-                offset: 25
+                offset: -220
             })
 
             $("#homepage .buttons").waypoint(function (direction) {
@@ -217,14 +217,18 @@
                 // Drop down nav bar
                 if (direction == "down") {
                     console.log(direction)
-                    $(".navbar").removeClass("fadeOutUp").toggleClass("animated").addClass("fadeInDown")
+                    $(".navbar").removeClass("fadeOutUp").toggleClass("animated").addClass("fadeInDown").css("opacity", 1)
+                    $("#homepage #logo").hide()
+                    $(this).css("opacity", 0)
                 }
 
                 if (direction == "up") {
-                    $(".navbar").removeClass("fadeInDown").addClass("fadeOutUp")
+                    $(".navbar").removeClass("fadeInDown").addClass("fadeOutUp").css("opacity", 0)
+                    $("#homepage #logo").show()
+                    $(this).css("opacity", 1)
                 }
 
-            }, {offset: 25})
+            }, {offset: -220})
 
             // $("#bottom-section").waypoint('sticky', {
             //     offset: 200
