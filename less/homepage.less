@@ -2,16 +2,69 @@
 // Homepage
 // --------------------------------------------------
 
-#fixed-signup {
-    width: 100%;
+h1, h2, img, p, a, .navbar {
+    -webkit-animation-duration: .5s;
+    -webkit-animation-delay: 0s;
+
+    animation-duration: .5s;
+    animation-delay: 0s;
+    // -vendor-animation-iteration-count: infinite;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar {
     position: fixed;
-    top: 0;
-    height: 80px;
-    padding: 10px 0;
-    background: @black;
-    text-align: center;
-    z-index: 3000;
+    background: rgba(0, 0, 0, .2);
+    // background: @gray-darker;
+    z-index: 1000;
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    color: white;
+
     opacity: 0;
+
+    li {
+
+        a {
+            text-transform: uppercase;
+            font-weight: 100;
+        }
+    }
+
+    .buttons {
+        text-align: center;
+        // margin-top: 15px;
+        position: relative;
+        z-index: 4000;
+        li {
+            color: white;
+        }
+        a {
+            color: @white;
+            margin: 0 5px;
+            z-index: 4000;
+        }
+
+        &.stuck {
+            position: fixed;
+            top: 0px;
+            margin-left: 80px;
+
+            a {
+                z-index: 4000;
+                margin: 0 13px;
+            }
+        }
+    }
+
+    #logo {
+        width: 150px;
+        margin: 0 auto;
+        margin-top: 6px;
+    }
 }
 
 #homepage {
@@ -31,13 +84,43 @@
         padding-bottom: 100px;
         z-index: 200;
 
-        img#top-section-image {
-            position: absolute;
-            // top: -130px;
+        #logo {
+            // height: 135px;
+            width: 280px;
+            // margin: 0 auto;
+            position: fixed;
+            text-align: left;
+            top: 20px;
+
+            img {
+                position: relative;
+                width: 100%;
+            }
+        }
+
+
+        .section1 {
+            // top: 0px;
+            // left: 0;
+            // width: 100%;
+            // min-height: 700px;
+            // position: fixed;
+            // background-size: 100%;
+
+            height: 750px;
+            width: 100%;
+            margin:auto;
+            border:1px solid @black;
+            background: url("../images/javits_center_dark.jpg") no-repeat fixed;
             top: 0px;
             left: 0;
-            width: 100%;
-            min-height: 700px;
+            background-size: 100%;
+        }
+
+        .section2 {
+            background: url("../images/javits_center.jpg") no-repeat fixed;
+            background-size: 100%;
+            height: 700px;
         }
 
         #headline {
@@ -46,17 +129,29 @@
             z-index: 2000;
             text-align: center;
 
-            #logo {
-                // height: 135px;
-                width: 280px;
-                // margin: 0 auto;
-                text-align: left;
-
-                img {
-                    position: relative;
-                    width: 100%;
-                }
+            #top-bar {
+                // background: rgba(0, 0, 0, .2);
+                // // background: blue;
+                // height: 85px;
+                // positon: fixed;
+                // margin-top: -30px;
+                // width: 100%;
+                // top: 20px;
             }
+
+            // #logo {
+            //     // height: 135px;
+            //     width: 280px;
+            //     // margin: 0 auto;
+            //     text-align: left;
+            //     position: fixed;
+            //     top: 20px;
+
+            //     img {
+            //         position: relative;
+            //         width: 100%;
+            //     }
+            // }
 
             h1 {
                 font-size: 68px;
@@ -115,13 +210,29 @@
             p.venue {
                 font-weight: 100;
                 font-size: 36px;
+                margin-bottom: 30px;
             }
 
             .buttons {
                 text-align: center;
-                margin-top: 40px;
+                margin-top: 15px;
+                position: relative;
+                z-index: 4000;
+
                 a {
                     margin: 0 13px;
+                    z-index: 4000;
+                }
+
+                &.stuck {
+                    position: fixed;
+                    top: 0px;
+                    margin-left: 30px;
+
+                    a {
+                        z-index: 4000;
+                        margin: 0 13px;
+                    }
                 }
             }
 
@@ -135,20 +246,6 @@
                     font-size: 26px;
                 }
 
-            }
-
-            #limited-time {
-                margin-top: 35px;
-                font-size: 18px;
-                margin-bottom: 0;
-                text-shadow: 0px 2px 2px @black;
-            }
-
-            #price {
-                margin-top: 0;
-                font-size: 30px;
-                font-weight: 700;
-                margin-bottom: 20px;
             }
 
             .stuck-btn {
@@ -170,8 +267,16 @@
 
     #bottom-section {
         text-align: center;
-        position: relative;
-        margin-top: 10px;
+        z-index: 4000;
+        margin-top: -100px;
+        // position: relative;
+
+        &.stuck {
+            margin-top: 50px;
+            position: fixed;
+            top: 0px;
+            margin-left: 30px;
+        }
 
         #amenities {
 
