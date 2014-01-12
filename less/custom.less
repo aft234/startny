@@ -71,3 +71,45 @@ h2 {
     font-size: 36px;
     color: @black;
 }
+
+.centered {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-small {
+    font-size: 12px;
+}
+
+
+// Custom navbar
+// ---------------------------------------
+.navbar-centered .navbar-nav {
+      float: none;
+      text-align: center;
+  }
+  .navbar-centered .navbar-nav > li {
+      float: none;
+  }
+  .navbar-centered .nav > li {
+      display: inline;
+  }
+  .navbar-centered .nav > li > a {
+      display: inline-block;
+  }
+
+
+
+// Custom Mixins
+// ---------------------------------------
+
+.filter(@filter) {
+    -webkit-filter: @filter;
+    -moz-filter: @filter;
+    -o-filter: @filter;
+    -ms-filter: @filter;
+    filter: @filter;
+}

@@ -19,13 +19,40 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  margin-top: 200px;
-  height: 60px;
+  height: 350px;
   background-color: @black;
+  color: @white;
   // border-top: 6px solid @black;
 
   .footer-icon:hover {
     text-decoration: none;
+  }
+
+  #right-side {
+    margin-top: 30px;
+  }
+
+  a {
+    color: @white;
+
+    &:hover {
+      color: @white;
+      text-decoration: underline;
+    }
+  }
+
+  .social-icon {
+    margin-left: 10px;
+
+    &:hover {
+      text-decoration: none;
+      .filter(brightness(135%));
+
+    }
+  }
+
+  #copyright {
+    margin-top: 60px;
   }
 
 }

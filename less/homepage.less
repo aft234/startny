@@ -218,7 +218,8 @@ h1, h2, img, p, a, .navbar {
         }
 
         .section {
-            margin: @section-padding;
+            padding-top: @section-padding;
+            padding-bottom: @section-padding;
             // position: fixed;
             // margin-top: -800px;
             // height: 1000px;
@@ -230,8 +231,13 @@ h1, h2, img, p, a, .navbar {
                 margin-bottom: 20px;
             }
 
-            .whos-coming {
-                margin-bottom: 10px;
+            .whos-coming, .our-friends {
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                a {
+                    height: 100px;
+                }
             }
 
             .box {
@@ -278,35 +284,16 @@ h1, h2, img, p, a, .navbar {
 
         }
 
+        #our-friends {
+            background: @blue-light;
+        }
+
         #headline {
             top: 15px;
             position: relative;
             z-index: 2000;
             text-align: center;
 
-            #top-bar {
-                // background: rgba(0, 0, 0, .2);
-                // // background: blue;
-                // height: 85px;
-                // positon: fixed;
-                // margin-top: -30px;
-                // width: 100%;
-                // top: 20px;
-            }
-
-            // #logo {
-            //     // height: 135px;
-            //     width: 280px;
-            //     // margin: 0 auto;
-            //     text-align: left;
-            //     position: fixed;
-            //     top: 20px;
-
-            //     img {
-            //         position: relative;
-            //         width: 100%;
-            //     }
-            // }
 
             @media (max-width: @screen-xs-max) {
 
@@ -320,19 +307,6 @@ h1, h2, img, p, a, .navbar {
 
             }
 
-            .stuck-btn {
-                width: 100%;
-                background: black;
-            }
-
-            #top-signup-btn {
-
-                &.stuck {
-                    position: fixed;
-                    top: 10;
-                }
-
-            }
         }
     }
 
