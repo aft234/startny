@@ -193,7 +193,7 @@
                         </div>
                     </div>
 
-                    <div class="section">
+                    <div class="section" id="features">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -206,7 +206,7 @@
                                                     <img src="images/icon_tradeshow1.png">
                                                     <h3>TRADESHOW</h3>
                                                 </div>
-                                                <div class="box-hover">
+                                                <div class="box-hover" data-id="tradeshow-details">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -223,7 +223,7 @@
                                                     <img src="images/icon_fireside_chats1.png">
                                                     <h3>FIRESIDE CHATS</h3>
                                                 </div>
-                                                <div class="box-hover">
+                                                <div class="box-hover" data-id="fireside-chats-details">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -240,7 +240,7 @@
                                                     <img src="images/icon_workshops1.png">
                                                     <h3>WORKSHOPS</h3>
                                                 </div>
-                                                <div class="box-hover">
+                                                <div class="box-hover" data-id="workshops-details">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -253,7 +253,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="box-container">
-                                                <div class="box">
+                                                <div class="box" data-id="hackathons-details">
                                                     <img src="images/icon_hackathons1.png">
                                                     <h3>HACKATHONS</h3>
                                                 </div>
@@ -274,7 +274,7 @@
                                                     <img src="images/icon_panels1.png">
                                                     <h3>PANELS</h3>
                                                 </div>
-                                                <div class="box-hover">
+                                                <div class="box-hover" data-id="panels-details">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -291,7 +291,7 @@
                                                     <img src="images/icon_recruiting1.png">
                                                     <h3>RECRUITING</h3>
                                                 </div>
-                                                <div class="box-hover">
+                                                <div class="box-hover" data-id="recruiting-details">
                                                     <p>
                                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -309,7 +309,7 @@
                         </div>
                     </div>
 
-                    <div class="section">
+                    <div class="section" id="feature-details">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -322,7 +322,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="feature">
+                                                            <div class="feature" data-id="tradeshow-details">
                                                                 <img src="images/icon_tradeshow1.png" class="col-md-6 col-md-offset-3">
                                                                 <h3>TRADESHOW</h3>
                                                             </div>
@@ -331,7 +331,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="feature">
+                                                            <div class="feature" data-id="fireside-chats-details">
                                                                 <img src="images/icon_fireside_chats1.png" class="col-md-6 col-md-offset-3">
                                                                 <h3>FIRESIDE CHATS</h3>
                                                             </div>
@@ -340,7 +340,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="feature">
+                                                            <div class="feature" data-id="workshops-details">
                                                                 <img src="images/icon_workshops1.png" class="col-md-6 col-md-offset-3">
                                                                 <h3>WORKSHOPS</h3>
                                                             </div>
@@ -349,7 +349,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="feature">
+                                                            <div class="feature" data-id="hackathons-details">
                                                                 <img src="images/icon_hackathons1.png" class="col-md-6 col-md-offset-3">
                                                                 <h3>HACKATHONS</h3>
                                                             </div>
@@ -358,7 +358,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="feature">
+                                                            <div class="feature" data-id="panels-details">
                                                                 <img src="images/icon_panels1.png" class="col-md-6 col-md-offset-3">
                                                                 <h3>PANELS</h3>
                                                             </div>
@@ -367,7 +367,7 @@
 
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="feature">
+                                                            <div class="feature" data-id="recruiting-details">
                                                                 <img src="images/icon_recruiting1.png" class="col-md-6 col-md-offset-3">
                                                                 <h3>RECRUITING</h3>
                                                             </div>
@@ -379,12 +379,75 @@
                                             </div>
 
                                             <div id="right-side" class="col-md-10">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                <a href="" class="close pull-right">X</a>
+
+                                                <div id="tradeshow-details" class="details">
+                                                    <h3>TRADESHOW</h3>
+                                                    <h4>
+                                                        Enhance your skills with classes on Lean Startup, Google Glass, How to Pitch, Bitcoin, Design, Development, and much more.
+                                                    </h4>
+
+                                                    <h4>
+                                                        Enter your email below for details on the workshops.
+                                                    </h4>
+                                                </div>
+
+                                                <div id="fireside-chats-details" class="details">
+                                                    <h3>FIRESIDE CHATS</h3>
+                                                    <h4>
+                                                        Enhance your skills with classes on Lean Startup, Google Glass, How to Pitch, Bitcoin, Design, Development, and much more.
+                                                    </h4>
+
+                                                    <h4>
+                                                        Enter your email below for details on the workshops.
+                                                    </h4>
+                                                </div>
+
+                                                <div id="workshops-details" class="details">
+                                                    <h3>WORKSHOPS</h3>
+                                                    <h4>
+                                                        Enhance your skills with classes on Lean Startup, Google Glass, How to Pitch, Bitcoin, Design, Development, and much more.
+                                                    </h4>
+
+                                                    <h4>
+                                                        Enter your email below for details on the workshops.
+                                                    </h4>
+                                                </div>
+
+                                                <div id="hackathons-details" class="details">
+                                                    <h3>HACKATHONS</h3>
+                                                    <h4>
+                                                        Enhance your skills with classes on Lean Startup, Google Glass, How to Pitch, Bitcoin, Design, Development, and much more.
+                                                    </h4>
+
+                                                    <h4>
+                                                        Enter your email below for details on the workshops.
+                                                    </h4>
+                                                </div>
+
+                                                <div id="panels-details" class="details">
+                                                    <h3>PANELS</h3>
+                                                    <h4>
+                                                        Enhance your skills with classes on Lean Startup, Google Glass, How to Pitch, Bitcoin, Design, Development, and much more.
+                                                    </h4>
+
+                                                    <h4>
+                                                        Enter your email below for details on the workshops.
+                                                    </h4>
+                                                </div>
+
+                                                <div id="recruiting-details" class="details">
+                                                    <h3>RECRUITING</h3>
+                                                    <h4>
+                                                        Enhance your skills with classes on Lean Startup, Google Glass, How to Pitch, Bitcoin, Design, Development, and much more.
+                                                    </h4>
+
+                                                    <h4>
+                                                        Enter your email below for details on the workshops.
+                                                    </h4>
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -607,16 +670,6 @@
 
 
         $(function () {
-            $(document).ready(function (){
-                // var height = $(window).height()
-                // var width = $(window).width()
-                // console.log(height, width)
-                // $(".section1").css("height", height)
-                // // $(".section1").css("width", width)
-                // $(".section2").css("height", height)
-                // // $(".section2").css("width", width)
-                // console.log($(".section1").height())
-            })
 
             $("#top-signup-btn").waypoint(function(up) {
                 // Show
@@ -651,51 +704,42 @@
 
             }, {offset: -310})
 
-            // $("#bottom-section").waypoint('sticky', {
-            //     offset: 200
-            // })
-
             $(".box-container").on("mouseenter", function () {
-                console.log("hover")
-                // $(".box", $(this))
-                //     .animate({
-                //         'top' : '-300px',
-                //     }, 300)
                 $(".box", $(this)).slideUp(100)
-                // $(".box-hover", $(this)).slideUp("fast")
             })
 
             $(".box-container").on("mouseleave", function () {
-                console.log("hover")
-                // $(".box", $(this))
-                //     .animate({
-                //         'top' : '-300px',
-                //     }, 300)
                 $(".box", $(this)).slideDown(100)
-                // $(".box-hover", $(this)).slideDown("fast")
             })
 
-            // $(".box-container").on("mouseleave", function () {
-            //     console.log("hover")
-            //     $(".box", $(this))
-            //         .animate({
-            //             'top' : '0px',
-            //         }, 300)
-            // })
+            $(".box-hover").on("click", function () {
 
-            // $(".box").on("mouseleave", function () {
-            //     console.log("hover")
-            //     console.log($(".box-hover", $(".box").parent()))
-            //     $(".box-hover", $(".box").parent()).removeClass("slideInUp").addClass("animated slideOutDown").css("opacity", 0)
-            // })
+                var id = $(this).attr("data-id")
+                $("#feature-details").show()
+                $("#features").hide()
 
-            // $(".box-hover").on("mouseleave", function () {
-            //     console.log("hover")
-            //     console.log($(".box-hover", $(".box").parent()))
-            //     $(this).removeClass("slideInUp").addClass("slideOutDown").css("opacity", 0)
-            // })
+                $(".feature").removeClass("selected")
+                $(".feature[data-id=" + id + "]").addClass("selected")
+                $(".details", $("#feature-popup")).hide()
+                $("#" + id, $("#feature-popup")).show()
+            })
+
+            $("body").on("click", "#feature-popup .feature", function () {
+                var id = $(this).attr("data-id")
+                $(".feature").removeClass("selected")
+                $(this).addClass("selected")
+                $(".details", $("#feature-popup")).hide()
+                $("#" + id, $("#feature-popup")).show()
+            })
+
+            $("body").on("click", "#feature-popup .close", function (e) {
+                e.preventDefault()
+                $("#feature-details").hide()
+                $("#features").show()
+            })
 
         })
+
 
         </script>
 
