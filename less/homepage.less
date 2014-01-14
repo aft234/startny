@@ -66,6 +66,16 @@ h1, h2, img, p, a, .navbar {
         margin: 0 auto;
         margin-top: 6px;
     }
+
+    @media (max-width: @screen-xs-max) {
+        #logo {
+            width: 220px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
 
 #homepage {
@@ -96,6 +106,15 @@ h1, h2, img, p, a, .navbar {
             img {
                 position: relative;
                 width: 100%;
+            }
+        }
+
+        @media (max-width: @screen-xs-max) {
+            #logo {
+                width: 235px;
+                text-align: center;
+                margin: 0 auto !important;
+                position: relative;
             }
         }
 
@@ -221,7 +240,7 @@ h1, h2, img, p, a, .navbar {
         @media (max-width: @screen-xs-max) {
             .buttons {
                 a {
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                 }
             }
         }
