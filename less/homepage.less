@@ -140,6 +140,34 @@ h1, h2, img, p, a, .navbar {
             }
         }
 
+        @media (max-width: @screen-xs-max) {
+            h1 {
+                span:first-child {
+                font-size: 85px;
+
+                    // line-height: 100px;
+                }
+
+                span:nth-child(2) {
+                    font-size: 56px;
+                    margin-top: -14px;
+                    // line-height: 100px;
+                }
+
+                span:nth-child(3) {
+                    font-size: 54px;
+                    margin-top: -6px;
+                    // line-height: 100px;
+                }
+
+                span:nth-child(4) {
+                    font-size: 79px;
+                    margin-top: -12px;
+                    // line-height: 100px;
+                }
+            }
+        }
+
         .hr-white {
             width: 320px;
             margin-top: 5px;
@@ -287,6 +315,12 @@ h1, h2, img, p, a, .navbar {
                     }
                 }
 
+                @media (max-width: @screen-xs-max) {
+                    .box {
+                        padding: 30% 0;
+                    }
+                }
+
                 .box-hover {
                     color: @black;
                     background: @blue;
@@ -304,6 +338,12 @@ h1, h2, img, p, a, .navbar {
                         margin-top: 20px;
                         // font-size: 14px;
                         color: @gray;
+                    }
+                }
+
+                @media (max-width: @screen-xs-max) {
+                    .box-hover {
+                        // padding: 14% 10%;
                     }
                 }
             }
@@ -433,6 +473,13 @@ h1, h2, img, p, a, .navbar {
             }
         }
 
+        @media (max-width: @screen-xs-max) {
+            .section {
+                padding-top: @section-padding-phone;
+                padding-bottom: @section-padding-phone;
+            }
+        }
+
         .section4 {
 
         }
@@ -446,20 +493,6 @@ h1, h2, img, p, a, .navbar {
             position: relative;
             z-index: 2000;
             text-align: center;
-
-
-            @media (max-width: @screen-xs-max) {
-
-                h1 {
-                    font-size: 40px;
-                }
-
-                h2 {
-                    font-size: 26px;
-                }
-
-            }
-
         }
     }
 
