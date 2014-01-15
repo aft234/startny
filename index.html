@@ -47,7 +47,7 @@
 
                         <div class="collapse navbar-collapse navbar-centered">
                             <ul class="nav navbar-nav buttons">
-                                <li>
+                                <li style="margin-left: 94px;">
                                     <a href="" class="btn btn-red btn-small">
                                         <span>STARTUPS</span>
                                         <span>APPLY</span>
@@ -430,7 +430,7 @@
                                                     <h3>WORKSHOPS</h3>
 
                                                     <h4>
-                                                        Every entrepreneur featured in Mashable began by learning the fundamentals of building a startup and effective communication. These techniques can help founders avoid the most common pitfalls in launching a new product or acquiring the resources they'll need to feed their company's growth. Sessions are 45 minutes in length and taught by some of our most admired startup heroes. Schedule to be released Feb 4th!
+                                                        Every entrepreneur featured in Mashable began by learning the fundamentals of building a startup and effective communication. These techniques can help founders avoid the most common pitfalls in launching a new product or acquiring the resources they'll need to feed their company's growth. Sessions are 45-minutes in length and taught by some of our most admired startup heroes. Schedule to be released Feb 4th!
                                                     </h4>
 
                                                     <h4>
@@ -513,7 +513,9 @@
                                                 <div id="recruiting-details" class="details">
                                                     <h3>JOBS PORTAL</h3>
                                                     <h4>
-                                                        One of the largest startup jobs fairs is destined to ensue when 500 growing startups and 10,000 people get together at the Javits Center on April 4. Our digital portal enables startup exhibitors to post real-time openings before the main event and receive inbound inquiries from qualified job-seeking attendees.
+                                                        Attend one of the largest startup jobs fairs in NYC as 500 growing startups and 10,000 people get together at the Javits Center on April 4. </h4>
+
+                                                    <h4>If you're a qualified job-seeking attendee, feel free to browse through our digital portal enables startup exhibitors to post openings before the main event and receive inbound inquiries from qualified job-seeking attendees.
                                                     </h4>
 
                                                     <h4>
@@ -846,6 +848,12 @@
                 console.log(typee, emaill)
                 $.post( "mail.php", { type: typee, email: emaill }, function (data) {
                     console.log(data)
+                    if (data == "") {
+                        $("input", $(this)).remove()
+                        $(this).append("<p>Thanks for submitting your email!</p>")
+                    } else {
+                        $(this).append("<p class='red'>Invalid email. Please try again!</p>")
+                    }
                 })
                     // .done(function( data ) {
                     //     alert( "Data Loaded: " + data );
