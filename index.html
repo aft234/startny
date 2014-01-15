@@ -5,9 +5,10 @@
         <link rel="icon" type="image/png" href="images/favicon_16x16.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
-        <link href="less/bootstrap.less" rel="stylesheet/less" type="text/css">
+        <!-- <link href="less/bootstrap.less" rel="stylesheet/less" type="text/css"> -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <!-- LESS -->
-        <script type="text/javascript" src="js/less-1.5.0.min.js"></script>
+        <!-- // <script type="text/javascript" src="js/less-1.5.0.min.js"></script> -->
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -886,61 +887,71 @@
 
 
         $(function () {
+            var $body = $("body")
+            var $fixed_signup = $("#fixed-signup")
+            var $navbar = $(".navbar")
+            var $logo = $("#homepage #logo")
+            var $home_buttons = $("#homepage .buttons")
+            var $containers = $(".box-container")
+            var $hovers = $(".box-hover")
+            var $feature_details = $("#feature-details")
+            var $features = $("#features")
+            var $all_features = $(".feature")
 
             $("#top-signup-btn").waypoint(function(up) {
                 // Show
-                $("#fixed-signup").animate({
+                $fixed_signup.animate({
                     opacity: 1
                 }, 100)
             }, {offset: -15})
 
             $("#top-signup-btn").waypoint(function(down) {
-                $("#fixed-signup").animate({
+                $fixed_signup.animate({
                     opacity: 0
                 }, 100)
             }, {offset: 15})
 
-            $("#homepage .buttons").waypoint('sticky', {
+            $home_buttons.waypoint('sticky', {
                 offset: -310
             })
 
-            $("#homepage .buttons").waypoint(function (direction) {
+            $home_buttons.waypoint(function (direction) {
                 // Drop down nav bar
                 if (direction == "down") {
-                    $(".navbar").removeClass("fadeOutUp").toggleClass("animated").addClass("fadeInDown").css("opacity", 1)
-                    $("#homepage #logo").hide()
+                    $navbar.removeClass("fadeOutUp").toggleClass("animated").addClass("fadeInDown").css("opacity", 1)
+                    $logo.hide()
                     $(this).css("opacity", 0)
                 }
 
                 if (direction == "up") {
-                    $(".navbar").removeClass("fadeInDown").addClass("fadeOutUp").css("opacity", 0)
-                    $("#homepage #logo").show()
+                    $navbar.removeClass("fadeInDown").addClass("fadeOutUp").css("opacity", 0)
+                    $logo.show()
                     $(this).css("opacity", 1)
                 }
 
             }, {offset: -310})
 
-            $(".box-container").on("mouseenter", function () {
+            $containers.on("mouseenter", function () {
                 $(".box", $(this)).slideUp(100)
             })
 
-            $(".box-container").on("mouseleave", function () {
+            $containers.on("mouseleave", function () {
                 $(".box", $(this)).slideDown(100)
             })
 
-            $(".box-hover").on("click", function () {
+            $hovers.on("click", function () {
 
                 var id = $(this).attr("data-id")
-                $("#feature-details").show()
-                $("#features").hide()
+                $feature_details.show()
+                $features.hide()
 
-                $(".feature").removeClass("selected")
+                $all_features.removeClass("selected")
                 $(".feature[data-id=" + id + "]").addClass("selected")
                 $(".details", $("#feature-popup")).hide()
                 $("#" + id, $("#feature-popup")).show()
             })
 
-            $("body").on("click", "#feature-popup .feature", function () {
+            $body.on("click", "#feature-popup .feature", function () {
                 var id = $(this).attr("data-id")
                 $(".feature").removeClass("selected")
                 $(this).addClass("selected")
@@ -948,10 +959,31 @@
                 $("#" + id, $("#feature-popup")).show()
             })
 
-            $("body").on("click", "#feature-popup .close", function (e) {
+            $body.on("click", "#feature-popup .close", function (e) {
                 e.preventDefault()
-                $("#feature-details").hide()
-                $("#features").show()
+                $feature_details.hide()
+                $features.show()
+            })
+
+            $("form").on("submit", function (e) {
+                e.preventDefault()
+                var typee = $(this).attr("id")
+                var emaill = $("input").val()
+                var self = $(this)
+                // console.log(typee, emaill)
+                $.post( "email.php", { type: typee, email: emaill }).done(function( data ) {
+                    data = JSON.parse(data)
+                    if (data["ok"]) {
+                        $("input", self).remove()
+                        self.append("<p>Thanks, we'll be in touch!</p>")
+                    }
+                });
+                    // if (data == "") {
+                    //     $("input", $(this)).remove()
+                    //
+                    // } else {
+                    //     $(this).append("<p class='red'>Invalid email. Please try again!</p>")
+                    // }
             })
 
         })
