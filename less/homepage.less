@@ -298,6 +298,12 @@ h1, h2, img, p, a, .navbar {
             // margin-bottom: 1000px;
             // width: 100%;
 
+            .grayscale {
+                filter: url(filters.svg#grayscale);
+                filter: gray;
+                -webkit-filter: grayscale(1);
+            }
+
             h2 {
                 text-align: center;
                 margin-bottom: 20px;
@@ -346,7 +352,7 @@ h1, h2, img, p, a, .navbar {
                     // height: 300px;
                     height: 300px;
                     margin-top: 0px;
-                    padding: 12% 10%;
+                    padding: 9% 10%;
 
                     p {
                         font-weight: 300;
@@ -428,7 +434,8 @@ h1, h2, img, p, a, .navbar {
                         font-size: 18px;
                         font-weight: 300;
                         line-height: 1.3em;
-                        margin-bottom: 15px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
                     }
 
                     p.title {
