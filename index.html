@@ -769,7 +769,7 @@
                                     <h2>OUR FRIENDS</h2>
                                     <div class="row">
                                         <a href="http://alleynyc.com" class="our-friends col-md-2 col-sm-3">
-                                            <img src="images/alleynyc-g.png" class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-4 col-xs-offset-4">
+                                            <img src="images/alleynyc-g.png" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-4 col-xs-offset-4">
                                         </a>
                                         <a href="http://nycedc.com" class="our-friends col-md-2 col-sm-3">
                                             <img src="images/nycedc.png" class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-8 col-xs-offset-2" style="margin-top: 20px;">
@@ -778,7 +778,7 @@
                                             <img src="images/garysguide-g.png" class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-8 col-xs-offset-2" style="margin-top: 20px;">
                                         </a>
                                         <a href="http://northsidefestival.com" class="our-friends col-md-2 col-sm-3">
-                                            <img src="images/northside-g.png" class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-4 col-xs-offset-4">
+                                            <img src="images/northside-g.png" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-4 col-xs-offset-4">
                                         </a>
                                         <a href="http://foundersbloc.com" class="our-friends col-md-2 col-sm-3">
                                             <img src="images/foundersbloc-g.png" class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-8 col-xs-offset-2" style="margin-top: 20px;">
@@ -786,14 +786,15 @@
                                         <a href="http://leanstartupmachine.com" class="our-friends col-md-2 col-sm-3 grayscale">
                                             <img src="images/lsm.png" class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-8 col-xs-offset-2" style="">
                                         </a>
-                                        <div class="clearfix"></div>
+                                        <div class="clearfix hidden-sm hidden-xs"></div>
                                         <a href="http://seamlessdocs.com" class="our-friends col-md-2 col-md-offset-2 col-sm-3 col-sm-offset-0 grayscale">
                                             <img src="images/seamlessdocs.png" class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-8 col-xs-offset-2" style="margin-top: 20px;">
                                         </a>
                                         <a href="http://empirical.ly" class="our-friends col-md-2 col-sm-3 grayscale">
                                             <img src="images/empirically.png" class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-4 col-xs-offset-4" style="margin-top: 10px">
                                         </a>
-                                        <a href="#" class="our-friends col-md-2 col-sm-3 grayscale">
+                                        <div class="clearfix hidden-xs hidden-md"></div>
+                                        <a href="#" class="our-friends col-md-2 col-md-offset-0 col-sm-3 col-sm-offset-3 grayscale">
                                             <img src="images/smilesforniles.jpg" class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-4 col-xs-offset-4" style="margin-top:">
                                         </a>
                                         <a href="http://libararyforall.ord" class="our-friends col-md-2 col-sm-3 grayscale">
@@ -951,23 +952,6 @@
                 e.preventDefault()
                 $("#feature-details").hide()
                 $("#features").show()
-            })
-
-            $("form").on("submit", function (e) {
-                e.preventDefault()
-                var typee = $(this).attr("id")
-                var emaill = $("input").val()
-                // console.log(typee, emaill)
-                $.post( "mail.php", { type: typee, email: emaill })
-                .done(function( data ) {
-                    alert( "Data Loaded: " + data );
-                });
-                    // if (data == "") {
-                    //     $("input", $(this)).remove()
-                    //     $(this).append("<p>Thanks for submitting your email!</p>")
-                    // } else {
-                    //     $(this).append("<p class='red'>Invalid email. Please try again!</p>")
-                    // }
             })
 
         })
