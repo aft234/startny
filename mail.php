@@ -13,6 +13,9 @@ $type = "";
 $email = $_POST["email"];
 $type = $_POST["type"];
 
+echo $email;
+echo $type;
+
 if ( ! filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error[] = "Please enter a valid email address.";
     }
