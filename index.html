@@ -821,14 +821,18 @@
                 e.preventDefault()
                 var typee = $(this).attr("id")
                 var emaill = $("input").val()
+                var self = $(this)
                 // console.log(typee, emaill)
-                $.post( "mail.php", { type: typee, email: emaill })
-                .done(function( data ) {
-                    alert( "Data Loaded: " + data );
+                $.post( "email.php", { type: typee, email: emaill }).done(function( data ) {
+                    data = JSON.parse(data)
+                    if (data["ok"]) {
+                        $("input", self).remove()
+                        self.append("<p>Thanks, we'll be in touch!</p>")
+                    }
                 });
                     // if (data == "") {
                     //     $("input", $(this)).remove()
-                    //     $(this).append("<p>Thanks for submitting your email!</p>")
+                    //
                     // } else {
                     //     $(this).append("<p class='red'>Invalid email. Please try again!</p>")
                     // }
