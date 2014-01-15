@@ -846,16 +846,16 @@
                 var typee = $(this).attr("id")
                 var emaill = $("input").val()
                 // console.log(typee, emaill)
-                $.post( "mail.php", { type: typee, email: emaill }
+                $.post( "mail.php", { type: typee, email: emaill })
+                .done(function( data ) {
+                    alert( "Data Loaded: " + data );
+                });
                     // if (data == "") {
                     //     $("input", $(this)).remove()
                     //     $(this).append("<p>Thanks for submitting your email!</p>")
                     // } else {
                     //     $(this).append("<p class='red'>Invalid email. Please try again!</p>")
                     // }
-                ).done(function( data ) {
-                        alert( "Data Loaded: " + data );
-                    });
             })
 
         })
