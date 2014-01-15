@@ -1,14 +1,13 @@
 <?php
 
+echo "hello";
+
 // Include the Autoloader
 require 'vendor/autoload.php';
 use Mailgun\Mailgun;
 
 
 $error = array();
-
-$email = "";
-$type = "";
 
 $email = $_POST["email"];
 $type = $_POST["type"];
@@ -22,14 +21,14 @@ if ( ! $error) {
 
     // Instantiate the client
     // You can create a free account and get your own API key here: http://www.mailgun.com/
-    $mgClient = new Mailgun('key-3ax6xnjp29jd6fds4gc373sgvjxteol0');
-    $domain = "sandbox45522.mailgun.org";
+    $mgClient = new Mailgun('Ykey-3wspm6cwsx2r8pq026l6svtswz4-ik25');
+    $domain = "propthink.mailgun.org";
 
     // Make the call to the client to send email.
     $result = $mgClient->sendMessage("$domain",
                           array(
                                 'from'    => "$email",
-                                'to'      => 'start@startny.co',
+                                'to'      => 'anthony.tumbiolo@gmail.com',
                                 'subject' => "$type",
                                 ));
 } else {
@@ -38,5 +37,7 @@ if ( ! $error) {
         echo "<p class='error'>$line</p>";
     }
 }
+
+echo "Test";
 
 ?>

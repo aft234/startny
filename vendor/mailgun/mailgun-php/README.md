@@ -1,6 +1,5 @@
 Mailgun-PHP
 ===========
-[![Build Status](https://travis-ci.org/mailgun/mailgun-php.png)](https://travis-ci.org/mailgun/mailgun-php)
 
 This is the Mailgun PHP SDK. This SDK contains methods for easily interacting 
 with the Mailgun API. 
@@ -8,7 +7,8 @@ Below are examples to get you started. For additional examples, please see our
 official documentation 
 at http://documentation.mailgun.com
 
-Current Release: 1.2
+[![Latest Stable Version](https://poser.pugx.org/mailgun/mailgun-php/v/stable.png)](https://packagist.org/packages/mailgun/mailgun-php)
+[![Build Status](https://travis-ci.org/mailgun/mailgun-php.png)](https://travis-ci.org/mailgun/mailgun-php)
 
 Installation
 ------------
@@ -22,14 +22,10 @@ composer and the Mailgun SDK.
 curl -sS https://getcomposer.org/installer | php
 
 # Add Mailgun as a dependency
-php composer.phar require mailgun/mailgun-php:~1.2
+php composer.phar require mailgun/mailgun-php:~1.5
 ``` 
 
-For shared hosts with SSH access, you might need to run this instead (contact 
-your shared host for assistance): 
-```
-php -d detect_unicode=Off -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
-```
+**For shared hosts without SSH access, check out our [Shared Host Instructions](SharedHostInstall.md).**
 
 Next, require Composer's autoloader, in your application, to automatically 
 load the Mailgun SDK in your project:

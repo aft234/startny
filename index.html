@@ -60,6 +60,9 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="mailto:start@startny.co" class="pull-right">Contact Us</a>
+                                </li>
+                                <li>
                                     <a href="" class="pull-right">Blog</a>
                                 </li>
                             </ul>
@@ -597,7 +600,9 @@
                                         <div class="col-md-4">
                                             <div class="blog-post">
                                                 <div class="row">
-                                                    <img src="images/javits_center.jpg" class="col-md-12 col-xs-12">
+                                                    <div class="col-md-12 col-xs-12" id="img-container">
+                                                        <img src="images/jakt_512.jpg" class="">
+                                                    </div>
                                                 </div>
                                                 <p class="post-title">
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -740,13 +745,6 @@
                                         <img src="images/btn_instagram1.png">
                                     </a> -->
 
-                                    <a href="mailto:start@startny.co" class="social-icon">
-                                        <img src="images/btn_contact1.png">
-                                    </a>
-                                </p>
-
-                                <p id="copyright" class="font-small">
-                                    START New York is Copyright &copy; 2014 START NY
                                 </p>
 
                             </div>
@@ -843,10 +841,10 @@
 
             $("form").on("submit", function (e) {
                 e.preventDefault()
-                var type = $(this).attr("id")
-                var email = $("input").val()
-                console.log(type, email)
-                $.post( "mail.php", { type: type, email: email }, function (data) {
+                var typee = $(this).attr("id")
+                var emaill = $("input").val()
+                console.log(typee, emaill)
+                $.post( "mail.php", { type: typee, email: emaill }, function (data) {
                     console.log(data)
                 })
                     // .done(function( data ) {

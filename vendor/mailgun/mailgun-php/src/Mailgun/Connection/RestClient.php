@@ -11,27 +11,28 @@ use Mailgun\Connection\Exceptions\NoDomainsConfigured;
 use Mailgun\Connection\Exceptions\MissingRequiredParameters;
 use Mailgun\Connection\Exceptions\MissingEndpoint;
 
-/* 
-   This class is a wrapper for the Guzzle (HTTP Client Library). 
+/*
+   This class is a wrapper for the Guzzle (HTTP Client Library).
 */
 
 class RestClient{
 
 	private $apiKey;
 	protected $mgClient;
-	
-	public function __construct($apiKey, $apiEndpoint, $apiVersion){	
+
+	public function __construct($apiKey, $apiEndpoint, $apiVersion, $ssl){
 		$this->apiKey = $apiKey;
-		$this->mgClient = new Guzzle('https://' . $apiEndpoint . '/' . $apiVersion . '/');
+		$this->mgClient = new Guzzle($this->generateEndpoint($apiEndpoint, $apiVersion, $ssl));
 		$this->mgClient->setDefaultOption('curl.options', array('CURLOPT_FORBID_REUSE' => true));
-		$this->mgClient->setDefaultOption('auth', array (API_USER, $this->apiKey));	
+		$this->mgClient->setDefaultOption('auth', array (API_USER, $this->apiKey));
 		$this->mgClient->setDefaultOption('exceptions', false);
 		$this->mgClient->setUserAgent(SDK_USER_AGENT . '/' . SDK_VERSION);
 	}
-	
+
 	public function post($endpointUrl, $postData = array(), $files = array()){
+		echo $endpointUrl;
 		$request = $this->mgClient->post($endpointUrl, array(), $postData);
-		
+
 		if(isset($files["message"])){
 			foreach($files as $message){
 				$request->addPostFile("message", $message);
@@ -51,30 +52,30 @@ class RestClient{
 		$response = $request->send();
 		return $this->responseHandler($response);
 	}
-	
+
 	public function get($endpointUrl, $queryString = array()){
 		$request = $this->mgClient->get($endpointUrl);
 		if(isset($queryString)){
 			foreach($queryString as $key=>$value){
 				$request->getQuery()->set($key, $value);
-			}			
+			}
 		}
 		$response = $request->send();
 		return $this->responseHandler($response);
 	}
-	
+
 	public function delete($endpointUrl){
 		$request = $this->mgClient->delete($endpointUrl);
 		$response = $request->send();
-		return $this->responseHandler($response);	
+		return $this->responseHandler($response);
 	}
-	
+
 	public function put($endpointUrl, $putData){
 		$request = $this->mgClient->put($endpointUrl, array(), $putData);
 		$response = $request->send();
 		return $this->responseHandler($response);
 	}
-	
+
 	public function responseHandler($responseObj){
 		$httpResponseCode = $responseObj->getStatusCode();
 		if($httpResponseCode === 200){
@@ -96,6 +97,15 @@ class RestClient{
 		}
 		$result->http_response_code = $httpResponseCode;
 		return $result;
+	}
+
+	private function generateEndpoint($apiEndpoint, $apiVersion, $ssl){
+		if(!$ssl){
+			return "http://" . $apiEndpoint . "/" . $apiVersion . "/";
+		}
+		else{
+			return "https://" . $apiEndpoint . "/" . $apiVersion . "/";
+		}
 	}
 }
 
