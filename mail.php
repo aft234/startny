@@ -35,7 +35,11 @@ if ( ! $error) {
     //                             'to'      => 'start@startny.co',
     //                             'subject' => "$type",
     //                             ));
-    mail("anthony.tumbiolo@gmail.com", "Email Subject", $type, "From: $email" );
+    if (mail("anthony.tumbiolo@gmail.com", "Email Subject", $type, "From: $email" )) {
+        echo "Worked!"
+    } else {
+        echo "Didn't work";
+    }
 } else {
     // Output any errors
     foreach ($error as $line) {
