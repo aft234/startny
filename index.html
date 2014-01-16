@@ -847,8 +847,8 @@
             $("form").on("submit", function (e) {
                 e.preventDefault()
                 var typee = $(this).attr("id")
-                var emaill = $("input").val()
                 var self = $(this)
+                var emaill = $("input", self).val()
                 // console.log(typee, emaill)
                 $.post( "email.php", { type: typee, email: emaill }).done(function( data ) {
                     data = JSON.parse(data)
