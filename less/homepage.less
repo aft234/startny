@@ -268,7 +268,8 @@
             width: 100%;
             margin: auto;
             // border:1px solid @black;
-            background: url("../images/javits_center_dark.jpg") no-repeat fixed;
+            // background: url("../images/javits_center_dark.jpg") no-repeat fixed;
+            background: @black;
             // top: 0px;
             // left: 0;
             margin: 0 auto;
@@ -280,7 +281,8 @@
             width: 100%;
             // width: 1200px;
             margin: 0 auto;
-            background: url("../images/javits_center.jpg") no-repeat fixed;
+            background: @blue;
+            // background: url("../images/javits_center.jpg") no-repeat fixed;
             // top: 0px;
             // left: 0;
             .background-size(100%);
@@ -494,6 +496,12 @@
             @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
                 #feature-popup {
                     height: 480px;
+
+                    #right-side {
+                        h3 {
+                            font-size: 30px;
+                        }
+                    }
                 }
             }
 
