@@ -111,7 +111,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div id="logo">
+                                        <div id="logo" class="hidden-opacity">
                                             <img src="images/startny_logo_alt.png">
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@
 
                                 <div class="row">
                                     <div class="col-md-4 col-md-offset-4">
-                                        <h1>
+                                        <h1 class="hidden-opacity">
                                             <span>NYC'S</span>
                                             <span>PREMIER</span>
                                             <span>STARTUP</span>
@@ -127,21 +127,21 @@
                                         </h1>
 
 
-                                        <hr class="hr-white"></hr>
+                                        <hr class="hr-white hidden-opacity"></hr>
 
                                         <!-- <p class="date">APRIL 4, 2014</p> -->
-                                        <p class="date">4.4.2014</p>
+                                        <p class="date hidden-opacity">4.4.2014</p>
 
-                                        <hr class="hr-white"></hr>
+                                        <hr class="hr-white hidden-opacity"></hr>
 
-                                        <p class="venue">Javits Center</p>
+                                        <p class="venue hidden-opacity">Javits Center</p>
 
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-0 col-xs-12 col-xs-offset-0">
-                                        <div class="row buttons">
+                                        <div class="row buttons hidden-opacity">
                                             <!-- <span class="visible-xs" style="color:blue">xtra small</span>
                                             <span class="visible-sm" style="color:blue">small</span>
                                             <span class="visible-md" style="color:blue">medium</span> -->
@@ -533,7 +533,7 @@
                                     <h2>RECENT BLOG POSTS</h2>
                                     <div class="row">
                                         <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0">
-                                            <a href="/blog/" class="blog-post-link">
+                                            <a href="http://www.startny.co/blog/lets-start-it-up/" class="blog-post-link">
                                                 <div class="blog-post">
                                                     <div class="row">
                                                         <img src="images/javits_center.jpg" class="col-md-12 col-xs-12">
@@ -552,7 +552,7 @@
                                             </a>
                                         </div>
                                         <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0">
-                                            <a href="" class="blog-post-link">
+                                            <a href="http://www.startny.co/blog/carolines-invitation/" class="blog-post-link">
                                                 <div class="blog-post">
                                                     <div class="row">
                                                         <div class="col-md-12 col-xs-12" id="img-container">
@@ -693,7 +693,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <p class="centered">Website by</p>
-                                <a href="http://byjakt.com"><img src="images/wordprint.png" class="col-md-12 col-xs-12"></a>
+                                <a href="http://byjakt.com" id="jakt"><img src="images/wordprint.png" class="col-md-12 col-xs-12"></a>
                             </div>
                             <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-right" id="right-side">
 
@@ -762,6 +762,19 @@
             var $feature_details = $("#feature-details")
             var $features = $("#features")
             var $all_features = $(".feature")
+
+            $(window).load(function () {
+                $("#top-section h1").removeClass("hidden-opacity").addClass('animated slideInLeft');
+                $("#top-section .date").removeClass("hidden-opacity").addClass('animated slideInRight');
+                $("#top-section .hr-white").removeClass("hidden-opacity").addClass('animated slideInRight');
+                $("#top-section .venue").removeClass("hidden-opacity").addClass('animated slideInLeft');
+                $("#top-section .buttons").removeClass("hidden-opacity").addClass('animated fadeInUpBig');
+                $("#top-section #logo").removeClass("hidden-opacity").addClass('animated fadeIn');
+            })
+
+            $("#jakt img").on("hover", function () {
+                $(this).addClass("animated wobble")
+            })
 
             $("#top-signup-btn").waypoint(function(up) {
                 // Show

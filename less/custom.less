@@ -90,6 +90,11 @@ h2 {
   color: @red;
 }
 
+.hidden-opacity {
+  opacity: 0;
+}
+
+
 
 // Custom navbar
 // ---------------------------------------
@@ -138,4 +143,16 @@ h2 {
   -moz-background-size: @size;
   -o-background-size: @size;
   background-size: @size;
+}
+
+
+// Animation
+// ________________________________
+* {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0s;
+
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+    // -vendor-animation-iteration-count: infinite;
 }
