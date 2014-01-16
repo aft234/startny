@@ -43,6 +43,23 @@
         li {
             color: white;
         }
+
+        li:first-child {
+            margin-left: 94px;
+        }
+
+        @media (max-width: @screen-xs-max) {
+            li:first-child {
+                margin-left: 0;
+            }
+        }
+
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+            li:first-child {
+                margin-left: 0;
+            }
+        }
+
         a {
             color: @white;
             margin: 0 5px;
