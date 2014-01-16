@@ -58,22 +58,22 @@
                         <div class="collapse navbar-collapse navbar-centered">
                             <ul class="nav navbar-nav buttons">
                                 <li style="margin-left: 94px;">
-                                    <a href="http://www.squadup.com/events/startny-exhibitors" class="btn btn-red btn-small">
+                                    <a id="gtm-startup-tickets-header" href="http://www.squadup.com/events/startny-exhibitors" class="btn btn-red btn-small">
                                         <span>STARTUPS</span>
                                         <span>APPLY</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="http://www.squadup.com/events/startny-attendees" class="btn btn-red btn-small">
+                                    <a id="gta-attendee-tickets-header" href="http://www.squadup.com/events/startny-attendees" class="btn btn-red btn-small">
                                         <span>ATTENDEES</span>
                                         <span>TICKETS</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:start@startny.co" class="pull-right">Contact Us</a>
+                                    <a href="mailto:start@startny.co" class="pull-right gtm-contact-us" gtm-action="Contact link">Contact Us</a>
                                 </li>
                                 <li>
-                                    <a href="" class="pull-right">Blog</a>
+                                    <a href="/blog" class="pull-right">Blog</a>
                                 </li>
                             </ul>
                         </div><!--/.nav-collapse -->
@@ -145,12 +145,12 @@
                                             <!-- <span class="visible-xs" style="color:blue">xtra small</span>
                                             <span class="visible-sm" style="color:blue">small</span>
                                             <span class="visible-md" style="color:blue">medium</span> -->
-                                            <a href="http://www.squadup.com/events/startny-exhibitors" class="btn btn-red">
+                                            <a id="gtm-startup-tickets-center" href="http://www.squadup.com/events/startny-exhibitors" class="btn btn-red">
                                                 <span>STARTUPS</span>
                                                 <span>APPLY</span>
                                             </a>
 
-                                            <a href="http://www.squadup.com/events/startny-attendees" class="btn btn-red">
+                                            <a id="gtm-attendee-tickets-center" href="http://www.squadup.com/events/startny-attendees" class="btn btn-red">
                                                 <span>ATTENDEES</span>
                                                 <span>TICKETS</span>
                                             </a>
@@ -224,7 +224,7 @@
                                                     <img src="images/icon_tradeshow1.png">
                                                     <h3>STARTUP SHOWCASE</h3>
                                                 </div>
-                                                <div class="box-hover" data-id="tradeshow-details">
+                                                <div data-id="tradeshow-details" class="box-hover gtm-feature-click" gtm-category="Feature Events" gtm-action="Tradeshow Learn More">
                                                     <p>
                                                         We know what you're thinking: Another startup tradeshow? Again? We're going to be honest and tell you THIS IS THE PLACE TO BE!
                                                     </p>
@@ -240,7 +240,7 @@
                                                     <img src="images/icon_fireside_chats1.png">
                                                     <h3>ONE-ON-ONES</h3>
                                                 </div>
-                                                <div class="box-hover" data-id="fireside-chats-details">
+                                                <div data-id="fireside-chats-details" class="box-hover gtm-feature-click" gtm-category="Feature Events" gtm-action="One to Ones Chats Learn More">
                                                     <p>
                                                         We've all had a million dollar idea but didn't know what to do! That's why we've asked the top startup minds to host 15-minute office hours all day long with attendees.
                                                     </p>
@@ -256,7 +256,7 @@
                                                     <img src="images/icon_workshops1.png">
                                                     <h3>WORKSHOPS</h3>
                                                 </div>
-                                                <div class="box-hover" data-id="workshops-details">
+                                                <div data-id="workshops-details" class="box-hover gtm-feature-click" gtm-category="Feature Events" gtm-action="Workshops Learn More">
                                                     <p>
                                                         You know what they say, great entrepreneurs are made not born. Our workshops are geared to teach the basics as well as advanced-level techniques to raise your startup game.
                                                     </p>
@@ -272,7 +272,7 @@
                                                     <img src="images/icon_hackathons1.png">
                                                     <h3>HACKATHONS</h3>
                                                 </div>
-                                                <div class="box-hover">
+                                                <div class="box-hover gtm-feature-click" gtm-category="Feature Events" gtm-action="Hackathons Learn More">
                                                     <p>
                                                         Pretty weird word if you are not at a startup! But that's the purpose of STARTNY, to create the place where the startup community converges with the outside world. Our two hackathons will be packed with developers and Red Bull. Feed your addiction!
                                                     </p>
@@ -288,7 +288,7 @@
                                                     <img src="images/icon_panels1.png">
                                                     <h3>PANELS</h3>
                                                 </div>
-                                                <div class="box-hover" data-id="panels-details">
+                                                <div data-id="panels-details" class="box-hover gtm-feature-click" gtm-category="Feature Events" gtm-action="Panels Learn More">
                                                     <p>
                                                         Did you just say Content Advertising? Growth Hacking? Internet of Things? These terms make even our team scratch our heads, so we're having experts explain them in plain English. If you don't know, now you know.
                                                     </p>
@@ -304,7 +304,7 @@
                                                     <img src="images/icon_recruiting1.png">
                                                     <h3>JOBS PORTAL</h3>
                                                 </div>
-                                                <div class="box-hover" data-id="recruiting-details">
+                                                <div data-id="recruiting-details" class="box-hover gtm-feature-click" gtm-category="Feature Events" gtm-action="Recruiting Learn More">
                                                     <p>
                                                         Craigslist is not the answer! Gain an edge on recruiting top talent and for your dream startup job through our HUGE online jobs portal. Open to exhibitors and attendees only. Sorry!
                                                     </p>
@@ -621,7 +621,7 @@
                                     </p>
 
                                     <div class="buttons">
-                                        <a href="mailto:sponsors@startny.co?subject=How%20can%20I%20get%20involved?!" class="btn btn-red">BECOME A SPONSOR</a>
+                                        <a id="gtm-sponsor" href="mailto:sponsors@startny.co?subject=How%20can%20I%20get%20involved?!" class="btn btn-red">BECOME A SPONSOR</a>
                                     </div>
 
 
@@ -715,7 +715,7 @@
                                 </p>
 
                                 <p>
-                                    <a href="">Contact Us</a>
+                                    <a class="gtm-contact-us" href="mailto:start@startny.co" gtm-action="Contact nav link">Contact Us</a>
                                 </p>
 
                                 <p>
