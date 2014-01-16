@@ -858,7 +858,9 @@
                     data = JSON.parse(data)
                     if (data["ok"]) {
                         $("input", self).remove()
-                        self.append("<p>Thanks, we'll be in touch!</p>")
+                        // self.append("<p>Great, we'll email you with more information!</p><p>Be sure to buy a ticket to get access to the event.</p><a href=''>")
+                        var html = "<p>Great, we'll email you with more information!</p><p>Be sure to buy a ticket to get access to the event.</p><p><a href='http://www.squadup.com/events/startny-attendees' class='btn btn-red btn-small'>TICKETS</a></p>"
+                        self.append(html)
                     }
                 });
                     // if (data == "") {
