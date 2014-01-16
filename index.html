@@ -798,13 +798,13 @@
                 if (direction == "down") {
                     $navbar.removeClass("fadeOutUp").toggleClass("animated").addClass("fadeInDown").css("opacity", 1)
                     $logo.hide()
-                    $(this).css("opacity", 0)
+                    $("a", $(this)).css("opacity", 0)
                 }
 
                 if (direction == "up") {
                     $navbar.removeClass("fadeInDown").addClass("fadeOutUp").css("opacity", 0)
                     $logo.show()
-                    $(this).css("opacity", 1)
+                    $("a", $(this)).css("opacity", 1)
                 }
 
             }, {offset: -310})
