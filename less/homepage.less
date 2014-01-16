@@ -542,52 +542,77 @@
                 }
             }
 
-            .blog-post {
-                text-align: left;
-                color: @black;
-                margin-top: 30px;
-
-                #img-container {
-                    min-height: 242px;
-                    // border: 1px solid @gray;
-                }
+            .blog-post-link {
 
                 img {
-                    max-height: 242px;
+                    .filter(brightness(90%));
                 }
 
-                .post-title {
-                    font-size: 18px;
-                    font-weight: 500;
-                    margin: 15px 0;
+                &:hover {
+                    text-decoration: none;
+
+                    img {
+                        .filter(brightness(100%));
+                    }
+
+                    .post-title, .more-details {
+                        text-decoration: underline;
+                    }
                 }
 
-                .date {
-                    font-weight: 500;
-                    font-size: 14px;
-                }
+                .blog-post {
+                    text-align: left;
+                    color: @black;
+                    margin-top: 30px;
 
-                .author {
-                    font-weight: 500;
-                    font-size: 14px;
-                    color: @gray;
-                }
+                    #img-container {
+                        min-height: 242px;
+                        // border: 1px solid @gray;
+                    }
 
-                .text {
-                    font-weight: 300;
-                    margin-top: -7px;
+                    img {
+                        height: 242px;
+                    }
 
-                    .more-details {
+                    .post-title {
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin: 15px 0 5px 0;
+                    }
+
+                    .date {
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+
+                    .author {
+                        font-weight: 500;
+                        font-size: 14px;
                         color: @gray;
+                    }
+
+                    .text {
+                        font-weight: 300;
+                        margin-top: -7px;
+
+                        .more-details {
+                            color: @gray;
+                        }
                     }
                 }
             }
+
         }
 
         @media (max-width: @screen-xs-max) {
             .section {
                 padding-top: @section-padding-phone;
                 padding-bottom: @section-padding-phone;
+
+                &#whoscoming {
+                    padding-top: 0px;
+                    margin-top: -50px;
+                }
             }
         }
 
