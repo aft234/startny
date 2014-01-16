@@ -968,7 +968,8 @@ html,body{height:100%;}
 @media (max-width:767px){#footer{height:600px;}#footer #right-side{margin-top:30px;text-align:center;}}#wrap>.container{padding:60px 15px 0;}
 .container .credit{margin:20px 0;}
 #footer>.container{padding:30px 15px;}
-@media (max-width:767px){#nav{margin-bottom:-6px;}}@media (min-width:768px) and (max-width:991px){#nav{margin-bottom:0px;}}.navbar{-webkit-animation-duration:.5s;-webkit-animation-delay:0s;animation-duration:.5s;animation-delay:0s;}
+@media (max-width:767px){#nav{margin-bottom:-6px;}}@media (min-width:768px) and (max-width:991px){#nav{margin-bottom:0px;}}body{overflow:hidden;}
+.navbar{-webkit-animation-duration:.5s;-webkit-animation-delay:0s;animation-duration:.5s;animation-delay:0s;}
 .navbar-default .navbar-nav>li>a{color:white;}
 .navbar{position:fixed;background:rgba(0, 0, 0, 0.8);z-index:1000;width:100%;padding:5px 0;border:none;color:white;opacity:0;}.navbar li a{text-transform:uppercase;font-weight:100;}
 .navbar .buttons{text-align:center;position:relative;z-index:4000;}.navbar .buttons li{color:white;}
