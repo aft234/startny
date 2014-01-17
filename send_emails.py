@@ -2,9 +2,10 @@
 #coding=utf-8
 
 if __name__ == "__main__":
-    import pytz
-    from datetime import datetime
     import sys
+    import pytz
+    import random
+    from datetime import datetime
     import requests
     from requests.auth import HTTPBasicAuth
     html_file = open("emailstartny/initial_email.html")
@@ -16,18 +17,19 @@ if __name__ == "__main__":
     url = "https://api.mailgun.net/v2/community.startny.co/messages"
 
     payload = {
-        "from": "Internal Monkey <monkey@community.startny.co>",
+        "from": "Caroline Taylor <monkey@community.startny.co>",
         "to": "internal@community.startny.co",
-        "subject": now.strftime("TEST: %B %d"),
+        "subject": "{0}: Strange Question?".format(random.randint(10000, 99999)),
         "html": html_body,
         "text": text_body,
+        "h:Reply-To": "Start NY <start@startny.co>"
         # Tracking information
-        "o:tracking": "yes",
-        "o:tracking-opens": "yes",
-        "o:tracking-clicks": "htmlonly",
+        # "o:tracking": "yes",
+        # "o:tracking-opens": "yes",
+        # "o:tracking-clicks": "htmlonly",
         # Campaign information
-        "o:tag": "Testing Email",
-        "o:campaign": "test_campaign",
+        # "o:tag": "Testing Email",
+        # "o:campaign": "test_campaign",
     }
     auth = HTTPBasicAuth("api", "key-1o403u2-vbcp5cy310omj5-mq3vfe3t6")
     res = requests.post(url, data=payload, auth=auth)
@@ -36,22 +38,3 @@ if __name__ == "__main__":
     else:
         print res.status_code
         print res.json()
-    """
-    if not msg:
-        print "Err: Please supply a message"
-    else:
-        payload = {
-            "from": "Joshua Kehn <josh@m.byjakt.com>",
-            "to": "jakt-b6Wp@team.idonethis.com",
-#           "cc": "walter@idonethis.com",
-#           "to": "walter@idonethis.com",
-#           "to": ["Joshua Kehn <josh@kehn.us>", "jakt-b6Wp@team.idonethis.com"],
-            "subject": now.strftime("%B %d"),
-            "text": msg
-        }
-        auth = HTTPBasicAuth("api", "key-1o403u2-vbcp5cy310omj5-mq3vfe3t6")
-        res = requests.post(url, data=payload, auth=auth)
-        if res.status_code != 200:
-            print res.text
-            sys.exit(1)
-        print "{0}: {1}".format(res.status_code, msg)"""
