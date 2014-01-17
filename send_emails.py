@@ -17,19 +17,19 @@ if __name__ == "__main__":
     url = "https://api.mailgun.net/v2/community.startny.co/messages"
 
     payload = {
-        "from": "Caroline Taylor <monkey@community.startny.co>",
+        "from": "Caroline Taylor <info@community.startny.co>",
         "to": "internal@community.startny.co",
-        "subject": "{0}: Strange Question?".format(random.randint(10000, 99999)),
+        "subject": "--MASTER EMAIL--{0}: Strange Question?".format(random.randint(10, 99)),
         "html": html_body,
         "text": text_body,
-        "h:Reply-To": "Start NY <start@startny.co>"
+        "h:Reply-To": "Start NY <start@startny.co>",
         # Tracking information
-        # "o:tracking": "yes",
-        # "o:tracking-opens": "yes",
-        # "o:tracking-clicks": "htmlonly",
+        "o:tracking": "yes",
+        "o:tracking-opens": "yes",
+        "o:tracking-clicks": "yes",
         # Campaign information
-        # "o:tag": "Testing Email",
-        # "o:campaign": "test_campaign",
+        "o:tag": "Launch Email",
+        "o:campaign": "gm_launch_campaign",
     }
     auth = HTTPBasicAuth("api", "key-1o403u2-vbcp5cy310omj5-mq3vfe3t6")
     res = requests.post(url, data=payload, auth=auth)
