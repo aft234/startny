@@ -83,29 +83,9 @@
                             </a> -->
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-                            <a class="twitter popup" href="" onClick="return tw_click(600, 400)" target="_blank">
+                            <a class="twitter popup" href="http://www.startny.co/?utm_source=twitter" onClick="return tw_click(600, 400)" target="_blank">
                                 <img src="images/twitter.png">
                             </a>
-
-
-                            <script>
-                              $('.popup').click(function(event) {
-                                var width  = 575,
-                                    height = 400,
-                                    left   = ($(window).width()  - width)  / 2,
-                                    top    = ($(window).height() - height) / 2,
-                                    url    = this.href,
-                                    opts   = 'status=1' +
-                                             ',width='  + width  +
-                                             ',height=' + height +
-                                             ',top='    + top    +
-                                             ',left='   + left;
-
-                                window.open(url, 'twitter', opts);
-
-                                return false;
-                              });
-                            </script>
 
                             <script type="text/javascript">
                             function tw_click(width, height) {
@@ -116,14 +96,14 @@
                                 topPosition = (window.screen.height / 4) - ((height / 4) + 50);
 
                                 var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
-                                u=location.href;
-                                t=document.title;
-                                u = "http://wwww.startny.co"
+                                // u=location.href;
+                                // t=document.title;
+                                // u = "http://wwww.startny.co"
 
                                 // var url="http://twitter.com/share?text=byjakt.com"
 
-                                var url="http://twitter.com/share?text=Somebody%20join%20me!%20I%20scored%20a%20discounted%20ticket%20to%20%23StartNY%20on%20April%204.%20startny.co"
-
+                                var url="http://twitter.com/intent/tweet?text=Somebody%20join%20me!%20I%20scored%20a%20discounted%20ticket%20to%20%23StartNY%20on%20April%204.%20startny.co"
+                                var url="https://twitter.com/intent/tweet?text=" + encodeURIComponent("Somebody join me! I scored a discounted ticket to #StartNY on April 4th. http://bit.ly/1drRnob")
 
                                 // url = encodeURIComponent("http://twitter.co/share?text=Somebody join me! I scored a discounted ticket to #StartNY on April 4. http://startny.co")
 
@@ -142,9 +122,8 @@
                                 topPosition = (window.screen.height / 4) - ((height / 4) + 50);
 
                                 var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
-                                u=location.href;
-                                t=document.title;
-                                u = "http://wwww.startny.co"
+                                var u="http://bit.ly/1ddWNQh";
+                                var t=document.title;
                                 window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer', windowFeatures);
                                 return false;
                             }
