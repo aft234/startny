@@ -915,8 +915,8 @@ h2{font-size:36px;color:#333333;}
 #homepage #top-section h1 span:first-child{font-size:100px;}
 #homepage #top-section h1 span:nth-child(2){font-size:66px;margin-top:-14px;}
 #homepage #top-section h1 span:nth-child(3){font-size:64px;margin-top:-6px;}
-#homepage #top-section h1 span:nth-child(4){font-size:46px;margin-top:-3px;}
-@media (max-width:767px){#homepage #top-section h1 span:first-child{font-size:85px;} #homepage #top-section h1 span:nth-child(2){font-size:56px;margin-top:-14px;} #homepage #top-section h1 span:nth-child(3){font-size:54px;margin-top:-6px;} #homepage #top-section h1 span:nth-child(4){font-size:79px;margin-top:-12px;}}#homepage #top-section .hr-white{width:320px;margin-top:5px;margin-bottom:5px;}
+#homepage #top-section h1 span:nth-child(4){font-size:46px;margin-top:-4px;}
+@media (max-width:767px){#homepage #top-section h1 span:first-child{font-size:85px;} #homepage #top-section h1 span:nth-child(2){font-size:56px;margin-top:-14px;} #homepage #top-section h1 span:nth-child(3){font-size:54px;margin-top:-6px;} #homepage #top-section h1 span:nth-child(4){font-size:39px;margin-top:-2px;}}#homepage #top-section .hr-white{width:320px;margin-top:5px;margin-bottom:5px;}
 @media (max-width:767px){#homepage #top-section .hr-white{width:280px;}}#homepage #top-section p.date{font-size:36px;font-weight:500;color:#51e2bf;text-shadow:0px 2px 3px rgba(0, 0, 0, 0.9);margin-bottom:0;}
 #homepage #top-section p.venue{font-weight:100;font-size:36px;margin-bottom:30px;color:#ffffff;}
 #homepage #top-section .buttons{text-align:center;margin-top:0px;position:relative;z-index:4000;}#homepage #top-section .buttons a{margin:0 13px;z-index:4000;}
