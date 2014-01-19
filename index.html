@@ -756,6 +756,7 @@
 
 
         $(function () {
+
             var $body = $("body")
             var $fixed_signup = $("#fixed-signup")
             var $navbar = $(".navbar")
@@ -768,13 +769,6 @@
             var $all_features = $(".feature")
 
             $(window).load(function () {
-
-                $(window).load(function(){
-                    setTimeout(function() {
-                        $('html, body').scrollTop(0);
-                    }, 10);
-                })
-
                 $('body').delay(250).css({'overflow':'visible'})
 
                 $("#top-section h1").removeClass("hidden-opacity").addClass('animated slideInLeft')
@@ -802,9 +796,9 @@
                 }, 100)
             }, {offset: 15})
 
-            $home_buttons.waypoint('sticky', {
-                offset: -310
-            })
+            // $home_buttons.waypoint('sticky', {
+            //     offset: -310
+            // })
 
             $home_buttons.waypoint(function (direction) {
                 // Drop down nav bar
