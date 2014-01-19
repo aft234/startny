@@ -948,7 +948,7 @@ h2{font-size:36px;color:#333333;}
 #homepage #top-section .section .blog-post-link .blog-post .date{font-weight:500;font-size:14px;}
 #homepage #top-section .section .blog-post-link .blog-post .author{font-weight:500;font-size:14px;color:#778692;}
 #homepage #top-section .section .blog-post-link .blog-post .text{font-weight:300;margin-top:-7px;}#homepage #top-section .section .blog-post-link .blog-post .text .more-details{color:#778692;}
-@media (max-width:767px){#homepage #top-section .section{padding-top:20px;padding-bottom:20px;}#homepage #top-section .section#whoscoming{padding-top:0px;margin-top:-20px;}}@media (min-width:768px) and (max-width:991px){#homepage #top-section .section{padding-top:20px;padding-bottom:20px;}#homepage #top-section .section#whoscoming{padding-top:0px;margin-top:-70px;}}
+@media (max-width:767px){#homepage #top-section .section{padding-top:20px;padding-bottom:20px;}#homepage #top-section .section#whoscoming{padding-top:0px;margin-top:-20px;}}@media (min-width:768px) and (max-width:991px){#homepage #top-section .section{padding-top:20px;padding-bottom:20px;}#homepage #top-section .section#whoscoming{padding-top:0px;margin-top:-20px;}}
 #homepage #top-section #our-friends{background:#e1f0f7;}
 #homepage #top-section #headline{top:15px;position:relative;z-index:2000;text-align:center;}
 @media (max-width:767px){#homepage #bottom-section{margin-top:-45px;}}
